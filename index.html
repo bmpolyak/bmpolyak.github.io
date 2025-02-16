@@ -1,0 +1,387 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Synaptiflora</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#111418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)"
+                fill="#000000" stroke="none">
+                <path d="M134 455 c-12 -30 7 -84 38 -110 28 -24 32 -25 41 -10 14 25 1 85
+                -24 111 -26 27 -47 31 -55 9z"/>
+                <path d="M304 455 c-28 -19 -48 -69 -40 -100 9 -34 29 -32 61 6 19 24 25 41
+                23 67 -3 41 -15 48 -44 27z"/>
+                <path d="M10 335 c0 -22 43 -63 74 -71 31 -8 76 2 76 17 0 6 -13 24 -29 40
+                -24 24 -38 29 -75 29 -35 0 -46 -4 -46 -15z"/>
+                <path d="M368 334 c-24 -12 -48 -42 -48 -58 0 -15 70 -16 98 -2 34 17 64 54
+                56 68 -8 13 -77 8 -106 -8z"/>
+                <path d="M49 197 c-19 -12 -35 -30 -37 -39 -4 -23 41 -31 82 -14 41 17 72 56
+                53 68 -22 14 -64 8 -98 -15z"/>
+                <path d="M333 212 c-19 -12 12 -51 53 -68 37 -15 84 -9 84 10 0 38 -103 82
+                -137 58z"/>
+                <path d="M165 136 c-28 -28 -40 -66 -31 -101 8 -31 26 -32 54 -2 25 27 36 68
+                28 102 -8 31 -20 32 -51 1z"/>
+                <path d="M265 131 c-8 -36 16 -95 44 -111 33 -17 44 -3 38 48 -4 34 -12 53
+                -32 69 -34 30 -42 29 -50 -6z"/>
+                </g>
+            </svg>
+            </div>
+            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">Synaptiflora CRC Cinical Stratification Tool</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Dashboard</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Models</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Reports</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">API and SDK</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Help center</a>
+        
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">New analysis</span>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-gray-400"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#ffffff"><path d="M226-262q59-42.33 121.33-65.5 62.34-23.17 132.67-23.17 70.33 0 133 23.17T734.67-262q41-49.67 59.83-103.67T813.33-480q0-141-96.16-237.17Q621-813.33 480-813.33t-237.17 96.16Q146.67-621 146.67-480q0 60.33 19.16 114.33Q185-311.67 226-262Zm253.88-184.67q-58.21 0-98.05-39.95Q342-526.58 342-584.79t39.96-98.04q39.95-39.84 98.16-39.84 58.21 0 98.05 39.96Q618-642.75 618-584.54t-39.96 98.04q-39.95 39.83-98.16 39.83ZM480.31-80q-82.64 0-155.64-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.51T80-480.18q0-82.82 31.5-155.49 31.5-72.66 85.83-127Q251.67-817 324.51-848.5T480.18-880q82.82 0 155.49 31.5 72.66 31.5 127 85.83Q817-708.33 848.5-635.65 880-562.96 880-480.31q0 82.64-31.5 155.64-31.5 73-85.83 127.34Q708.33-143 635.65-111.5 562.96-80 480.31-80Zm-.31-66.67q54.33 0 105-15.83t97.67-52.17q-47-33.66-98-51.5Q533.67-284 480-284t-104.67 17.83q-51 17.84-98 51.5 47 36.34 97.67 52.17 50.67 15.83 105 15.83Zm0-366.66q31.33 0 51.33-20t20-51.34q0-31.33-20-51.33T480-656q-31.33 0-51.33 20t-20 51.33q0 31.34 20 51.34 20 20 51.33 20Zm0-71.34Zm0 369.34Z"/></svg>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] text-4xl font-black leading-tight tracking-[-0.033em]">Hello, Helen, let's get started with the prediction</p>
+                <p class="text-[#637588] text-base font-normal leading-normal">
+                  Upload a file to get started, or use the sandbox. We'll analyze the data and provide you with a risk insight report.<br />
+                </p>
+              </div>
+            </div>
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Upload a file</h3>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="text-[#111418] flex items-center justify-center rounded-lg bg-[#f0f2f4] shrink-0 size-12"
+                  data-icon="CloudArrowUp"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#111418"><path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H520q-33 0-56.5-23.5T440-240v-206l-64 62-56-56 160-160 160 160-56 56-64-62v206h220q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41h100v80H260Zm220-280Z"/></svg>                </div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Upload a file</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">Accepts .json, .csv, .tsv, .xls or .xlsx. <a class=underline href=#>Read the data format guidelines.</a></p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Use the sandbox</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex float-right min-w-72 flex-row flex-col-2 justify-center w-full gap-4 py-4">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Run data quality checks</span>
+              </button>
+
+            </div>
+
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+                Running data quality checks
+            </h3>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-100">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
+              </div>
+              </div>
+
+             <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Quality analysis results</h3>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dce0e5] p-6">
+                <p class="text-[#111418] text-base font-medium leading-normal">Data quality score</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">98%</p>
+                <p class="text-[#FFAE01] text-base font-medium leading-normal">Warning: taxa abundance exceeded</p>
+                <p class="text-[#111418] text-base font-medium leading-normal">You can proceed with analysis</p>
+                <p class="text-gray-400 text-s font-medium leading-normal">It will take ~50 min</p>
+                <div class="flex-grow"></div>
+                    <button
+                    class="flex flex-row gap-2 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="16px" fill="#ffffff"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+                        <span class="truncate">
+                            Open data prep tool</span>
+                  </button>
+              </div>
+              <div class="flex min-w-144 flex-auto flex-col gap-2 rounded-xl border border-[#dce0e5] p-6">
+                    <p class="text-[#111418] text-base font-medium leading-normal">Data quality metrics</p>
+                    <table class="table-fixed text-[14px] font-small leading-normal">
+                        <tbody class="divide-y divide-solid divide-[#dce0e5]">
+                            <tr>
+                                <td class="px-4 py-2">Total Rows</td>
+                                <td class="px-4 py-2">3,930</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2">Missing Values</td>
+                                <td class="px-4 py-2 text-[#078838]">0%</td>
+                            </tr>  
+                            <tr>
+                                <td class="px-4 py-2">Duplicate Entries</td>
+                                <td class="px-4 py-2 text-[#078838]">None</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2">Unknown Bacteria</td>
+                                <td class="px-4 py-2 text-[#078838]">None</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2"># of Species</td>
+                                <td class="px-4 py-2 text-[#078838]">0 warnings</td>
+                            </tr>
+
+                            <tr>
+                                <td class="px-4 py-2">Taxa Abundance</td>
+                                <td class="flex justify-between gap-2 px-4 py-2 text-[#FFAE01]">79 warnings
+                                    <button
+                                    class="flex min-w-[40px] max-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-6 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal"
+                                  >
+                                    <span class="truncate">Fix</span>
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2">Alpha Diversity</td>
+                                <td class="px-4 py-2 text-[#078838]">0 warnings</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap min-w-72 w-full gap-3 justify-center">
+                <form class="flex gap-3 items-center">
+                  <select id="models" class="flex min-w-[250px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-white border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Select a model</option>
+                    <option value="1">Model 1</option>
+                    <option value="2">Model 2</option>
+                    <option value="3">Model 3</option>
+                    <option value="4">Model 4</option>
+                  </select>
+              
+                  <button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Run analysis</span>
+                  </button>
+                </form>
+              </div>
+
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+                Running prediction analysis
+            </h3>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-100">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+              </div>
+              </div>
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Analysis results</h3>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dce0e5] p-6">
+                <p class="text-[#111418] text-base font-medium leading-normal">Non-response risk level cohort distribution</p>
+                <div class="py-6 mt-4 grid place-items-center px-2">
+                    <div id="pie-chart"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script>
+                  const pieChartConfig = {
+                    series: [38, 52, 10],
+                    chart: {
+                      type: "pie",
+                      width: 200,
+                      height: 200,
+                      toolbar: {
+                        show: false,
+                      },
+                    },
+                    title: {
+                      show: "",
+                    },
+                    stroke: {
+                        width: 2
+                    },
+                    dataLabels: {
+                      enabled: false,
+                    },
+                    labels: ["High responders, %", "Medium responders, %", "Low responders, %"],
+                    colors: ["#078838", "#FFAE01", "#FF2E00"],
+                    legend: {
+                      show: false,
+                    },
+                  };
+                   
+                  const pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieChartConfig);
+                   
+                  pieChart.render();
+                  </script>
+                                  
+              </div>
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dce0e5] p-6 ">
+                <p class="text-[#111418] text-base font-medium leading-normal ">Response prediction decile distribution</p>
+                <div class="py-6 mt-4 grid place-items-center px-0">
+                    <div id="bar-chart"></div>
+                  </div>
+                    <script>
+                        const barChartConfig = {
+                        series: [
+                            {
+                            name: "Participants",
+                            data: [50, 40, 110, 320, 500, 350, 280, 230, 500, 120],
+                            },
+                        ],
+                        chart: {
+                            type: "bar",
+                            height: 240,
+                            width: 240,
+                            toolbar: {
+                            show: false,
+                            },
+                        },
+                        title: {
+                            show: false,
+                        },
+                        legend: {
+                            show: false,
+                        },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        colors: ["#FF2E00", "#FF2E00", "#FF2E00", "#FFAE01", "#FFAE01", "#FFAE01", "#FFAE01", "#FFAE01", "#078838", "#078838"],
+                        plotOptions: {
+                            bar: {
+                            distributed: true,  // Enable individual coloring
+                            columnWidth: "80%",
+                            borderRadius: 2,
+                            },
+                        },
+                        xaxis: {
+                            axisTicks: {
+                            show: false,
+                            },
+                            axisBorder: {
+                            show: false,
+                            },
+                            labels: {
+                            show: false,
+                            style: {
+                                colors: "#616161",
+                                fontSize: "12px",
+                                fontFamily: "inherit",
+                                fontWeight: 50,
+                            },
+                            },
+                            categories: [
+                            "0.0-0.1",
+                            "0.1-0.2",
+                            "0.2-0.3",
+                            "0.3-0.4",
+                            "0.4-0.5",
+                            "0.5-0.6",
+                            "0.6-0.7",
+                            "0.7-0.8",
+                            "0.8-0.9",
+                            "0.9-1.0",
+                            ],
+                        },
+                        yaxis: {
+                            labels: {
+                                show: false,
+                            style: {
+                                colors: "#616161",
+                                fontSize: "12px",
+                                fontFamily: "inherit",
+                                fontWeight: 400,
+                            },
+                            },
+                        },
+                        grid: {
+                            show: true,
+                            borderColor: "#dddddd",
+                            strokeDashArray: 5,
+                            xaxis: {
+                            lines: {
+                                show: false,
+                            },
+                            },
+                            padding: {
+                            top: 5,
+                            right: 20,
+                            },
+                        },
+                        fill: {
+                            opacity: 0.8,
+                        },
+                        tooltip: {
+                            theme: "dark",
+                        },
+                        };
+                        
+                        const barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartConfig);
+                        
+                        barChart.render();
+                        </script>
+              </div>
+
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dce0e5] p-6">
+                <p class="text-[#111418] text-base font-medium leading-normal">Confidence</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">0.8910</p>
+                <p class="text-[#078838] text-base font-medium leading-normal">High</p>
+
+                <p class="text-[#111418] text-base font-medium leading-normal">Model used</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">Model 1</p>
+
+                <p class="text-[#111418] text-base font-medium leading-normal">Executed in</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">48 m 12 s</p>
+                <p class="text-[#078838] text-base font-medium leading-normal">That is fast!</p>
+
+              </div>
+              <div class="flex float-right min-w-72 flex-row flex-col-2 justify-end w-full gap-3">              <button
+                class="flex flex-row gap-2 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z"/></svg>
+                <span class="truncate">Download detailed report</span>
+              </button>
+              <button
+                class="flex flex-row gap-2 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M227-346q-16-30-25.5-63.5T192-480q0-121 85-206t209-82l-57-57 51-51 144 144-144 144-51-51 57-57q-94-2-158 62t-64 154q0 22 4 42t12 39l-53 53ZM480-84 336-228l144-144 51 51-57 57q94 2 158-62t64-154q0-22-4-42t-12-39l53-53q16 30 25.5 63.5T768-480q0 120-85 205.5T474-192l57 57-51 51Z"/></svg>
+                <span class="truncate">Restart the analysis </span>
+              </button>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
